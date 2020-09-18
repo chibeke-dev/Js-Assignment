@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">	
+<title>Js Assignment</title>
+</head>
+​
+​
+<body>
+<div id="content"></div>
+​
+<script>
+	company = [
+		{
+			"SN" : "1",
+			"name" : "Tiidelab",
+			"mail" : "talk2@tiidelab.com",
+			"phone" : "09080930068",
+			"location" : "Africa"
+		},
+		{
+			"SN" : "2",
+			"name" : "Tech Specialist",
+			"mail" : "Support@tech.com",
+			"phone" : "08020458893",
+			"location" : "World"
+		},
+		{
+			"SN" : "3",
+			"name" : "C-Tech",
+			"mail" : "ctechservices@g.com",
+			"phone" : "08060502030",
+			"location" : "World"
+		},
+		{
+			"SN" : "4",
+			"name" : "Darling",
+			"mail" : "reach@darling.com",
+			"phone" : "08100000000",
+			"location" : "Africa"
+		},
+		{
+			"SN" : "5",
+			"name" : "Microsoft",
+			"mail" : "microsoft@mail.com",
+			"phone" : "07020406699",
+			"location" : "World"
+		}
+	]
+	
+	
+	objectKeys = Object.keys(company[0]);
+	ans = `
+      <table cellpadding="10" align="center">
+
+	 <tr>`;
+	for(i=0; i < objectKeys.length; i++) {
+		ans += `<th>${(objectKeys[i]).toUpperCase()}</th>`
+	}
+	ans += `
+    </tr>
+    <tbody>
+	`;
+	for(i=0; i < company.length; i++) {
+		ans += `<tr>`;
+		ans += `<td>${company[i].SN}</td>`;
+		ans += `<td>${company[i].name}</td>`;
+		ans += `<td>${company[i].mail}</td>`;
+		ans += `<td>${company[i].phone}</td>`;
+		ans += `<td>${company[i].location}</td>`;
+		ans += `</tr>`;
+	}
+
+	ans += `
+    </tbody>
+	</table>
+	`;
+	document.getElementById("content").innerHTML = `${ans}`;
+	
+</script>
+		
+  </body>
+</html>
+
+
+
+
